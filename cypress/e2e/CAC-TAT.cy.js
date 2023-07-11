@@ -1,3 +1,5 @@
+/// <reference types= "cypress" />
+
 describe('Central de Atendimento ao Cliente TAT', function (){
     const THEE_SECONDS_IN_MS = 3000
 
@@ -91,7 +93,7 @@ describe('Central de Atendimento ao Cliente TAT', function (){
 
     it('Envia o formuário com sucesso usando um comando customizado', function () {
         cy.clock()
-        cy.fillMandatoryFieldsAndSubmit()
+       cy.fillMandatoryFieldsAndSubmit()
         cy.get('.success').should('be.visible')
         cy.tick(THEE_SECONDS_IN_MS)
         cy.get('.success').should('not.be.visible')
